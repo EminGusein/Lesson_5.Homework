@@ -31,7 +31,10 @@ void Task36()
     MyLibClass.FillArray(numbers);
     MyLibClass.PrintArray(numbers);
 
-    Console.WriteLine($"Количество НЕчётных чисел в массиве = {MyLibClass.AmountOddNum(numbers)}");
+    int sum = 0;
+    for (int i = 1; i < numbers.Length; i += 2) sum += numbers[i];
+
+    Console.WriteLine($"Cумма элементов с нечётными индексами равна: {sum}");
 
 
 }
@@ -62,9 +65,9 @@ void Task38()
     Console.WriteLine($"Максимальный элемент массива: {max}");
     Console.WriteLine($"Минимальный элемент массива: {min}");
     Console.WriteLine($"Разница между максимальным и минимальным элементом массива = {Math.Round(diff, 2)}");
-   
+
 }
 
-Task38();
+Task36();
 
 
