@@ -49,17 +49,17 @@ public static class MyLibClass
         return amount;
     }
 
-    public static void FillArray(double[] array) // Заполняет массив случайными вещественными числами
+    public static void FillArray(double[] array, int minValue = -9, int maxValue = 9) // Заполняет массив случайными вещественными числами
     {
         Random rnd = new Random();
         for (int i = 0; i < array.Length; i++)
         {
-            array[i] = Convert.ToDouble(rnd.Next(100)/10.0);
+            array[i] = Math.Round(rnd.NextDouble() * (maxValue - minValue) + minValue, 2);
         }
 
     }
 
-     public static void PrintArray(double[] array) // Печатает массив вещественных чисел
+    public static void PrintArray(double[] array) // Печатает массив вещественных чисел
     {
         for (int i = 0; i < array.Length; i++)
         {
